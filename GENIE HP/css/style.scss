@@ -1,0 +1,408 @@
+@charset "utf-8";
+
+/* 共通部分
+---------------------------------------------------------------------------------------------------*/
+
+html{
+  font-size: 100%;
+}
+
+body{
+  font-family: serif;
+  line-height: 1.7;
+  color: #432;
+  background-color: #ebf8fa;
+}
+
+a{
+  text-decoration: none;
+}
+
+li{
+  list-style: none;
+}
+
+img{
+  max-width: 100%;
+}
+
+.wrapper{
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 4%;
+}
+
+/*-----HEADER-------
+-------------------------------------------------------------------------------------------------*/
+
+header{
+  margin: 0 auto;
+  padding: 0 4%;
+  border-bottom: 2px solid #0090aa;
+    position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+.insta{
+  color: rgb(185, 49, 94);
+  font-size: 2rem;
+}
+
+.line{
+  color: rgb(7, 221, 7);
+  font-size: 2rem;
+}
+
+.facebook{
+  color: #0090aa;
+  font-size: 2rem;
+}
+
+
+
+.logo{
+  width: 210px;
+  margin-top: 14px;
+}
+
+.main-nav{
+  display: flex;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  margin-top: 34px;
+
+  li{
+    margin-left: 36px;
+  }
+
+  a{
+    color:#432;
+    &:hover{
+      color: #0bd;
+    }
+  }
+}
+
+.page-header{
+  display: flex;
+  justify-content: space-between;
+  background-color: #ffffff;
+  
+}
+
+/*hr{
+  border-width: 2px 0 0 0;
+  border-color:#0bd;
+}
+/*-- HOME --
+------------------------------------------------------------------------------------------------------*/
+
+.home-content{
+  text-align: left;
+  margin-top: 8%;
+
+  p{
+    font-size: 2rem;
+    margin: 10px 0 42px;
+    padding-left: 10%;
+  }
+}
+
+/*^-- 見出し　--
+-----------------------------*/
+
+.page-title{
+  font-size: 4rem;
+  text-transform: uppercase;
+  font-weight: normal;
+  margin-bottom: 25%;
+}
+
+/*---- BUTTON --
+--------------------------*/
+
+.button{
+  display: inline-block;
+  margin-left: 25%;
+  font-size: 1.135rem;
+  background-color: #0bd;
+  color: #fff;
+  border-radius: 5px;
+  padding: 18px 32px;
+  box-shadow: 0 7px black;
+
+  &:active{
+    position: relative;
+    box-shadow: none;
+    top: 7px;
+  }
+
+  &:hover{
+    background-color: #0090aa;
+
+  }
+}
+
+/*---- BIG-IMAGE ------
+------------------------------------------*/
+
+#home{
+  background-image: url("../images/genie-illustration.png");
+  min-height: 150vh;
+
+  & .page-title{
+    text-transform: none;
+  }
+}
+
+.big-bg{
+  background-size: cover;
+  background-position: center top;
+  background-repeat: no-repeat;
+}
+
+/*-- MOBILE VERSION--
+--------------------------*/
+
+@media(max-width:600px){
+  .page-title{
+    font-size: 2.5rem;
+  }
+
+  /*-- HEADER--*/
+  .main-nav{
+    font-size: 1rem;
+    margin-top: 10px;
+    
+    li{
+      margin: 0 20px;
+    }
+  }
+
+  .page-header{
+    flex-direction: column;
+    align-items: center;
+    
+  }
+ 
+  /*-- HOME CONTENT--*/
+  .home-content{
+    margin-top: 15%;
+    padding-top: 15%;
+    p{
+      font-size: 1.125rem;
+      position: relative;
+      right: 30px;
+      top: 20px;
+    }
+  }
+
+  #home{
+    background-size: cover;
+    min-height: auto;
+    padding-bottom: 0;
+  }
+  
+  .button{
+    padding: 9px 16px;
+    margin-left: 3%;
+    font-size: 1rem;
+    margin-bottom: 3%;
+  }
+
+  .page-title{
+    font-size: 1.5rem;
+    position: relative;
+    top: 90px;
+  }
+
+  .content{
+    font-size: 0.8rem;
+  }
+
+  
+  
+}
+
+
+
+
+
+/*---- FEEDBACK --
+-------------------------------------------------------------------------------*/
+
+/* feedbackセクションのスタイル */
+#feedback {
+  background-color: #f9f9f9;
+  padding: 50px 0;
+}
+
+.feedback-top {
+  text-align: center;
+  p{
+    font-size: 1rem;
+  }
+}
+
+.feedback-top h2 {
+  font-size: 4rem;
+  color: #333;
+
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 30px;
+  margin-top: 40px;
+}
+
+.item {
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+}
+
+.back-img {
+  width: 100%;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+.grid-content h3 {
+  font-size: 20px;
+  color: #333;
+}
+
+.grid-content p {
+  color: #666;
+}
+
+
+/*#feedback{
+  background-image: url(../images/feedback_bg.jpg);
+  margin-bottom: 40px;
+  
+  & .feedback-top{
+    text-align: center;
+
+    h2{
+      font-size: 4rem;
+      text-transform: uppercase;
+      font-weight: normal;
+    }
+
+    p{
+      font-size: 1.375rem;
+    }
+  }
+}
+
+.grid{
+  display: grid;
+  gap: 26px;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  margin-top: 6%;
+  margin-bottom: 50px;
+}
+
+.item{
+  display: flex;
+  align-items: flex-start;
+  border: 10px ridge rgba($color: gray, $alpha: 0.5);
+  
+
+  img{
+    margin-right: 20px;
+  }
+}
+
+.back-img{
+  width: 50%;
+  display: inline-block;
+}
+
+.grid-content{
+  margin-right: 0 14px 14px 0;
+ 
+}
+
+/*--MENU----
+--------------------------------------------------------------*/
+
+.menu{
+  display: grid;
+  gap: 40px;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.menu-title{
+  text-align: center;
+  font-size: 4rem;
+  margin-bottom: 20px;
+}
+
+.menu-item{
+  background: #eee;
+  position: relative;
+  padding: 10px 15px;
+  color: #313131;
+  transition: 0.3s ease-in-out;
+  font-weight: 500;
+  z-index:0;
+  
+  a{
+    color: darkblue;
+  }
+
+  &:hover{
+   
+    &:before{
+      width: 100%;
+      z-index: -1;
+    }
+  }
+
+  &:before{
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 0;
+    display: block;
+    background: #6bb6ff;
+    transition: .3s;
+    left:0;
+  }
+}
+
+.description{
+  display: none;
+  padding: 0 3%;
+}
+
+.text-active{
+  display: block;
+}
+
+
+.menu-background{
+  background: linear-gradient(75deg, rgb(244, 244, 224), #efe416);
+  background-size: cover;
+  padding-bottom: 2%;
+}
+
+.content{
+  height: 20vh;
+}
+
+@media screen and (max-width: 767px) {
+  /* スマートフォンの幅に適用されるスタイル */
+  .wrapper {
+    padding: 0;
+  }
+}
